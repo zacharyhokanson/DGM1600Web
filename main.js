@@ -1,14 +1,26 @@
-var charName = document.querySelector("#characterName");
-var hairColor = document.querySelector("#hairColor");
-var eyeColor = document.querySelector("#eyeColor");
+// var charName = document.querySelector("#characterName");
+// var hairColor = document.querySelector("#hairColor");
+// var eyeColor = document.querySelector("#eyeColor");
 
-fetch('https://swapi.co/api/people/1/')
+fetch('https://swapi.co/api/films/')
 .then(function(response) {
   return response.json();
 })
 .then(function(myJson) {
-    charName.textContent = myJson.name;
-    hairColor.textContent = "Hair Color: " + myJson.hair_color;
-    eyeColor.textContent = "Eye Color: " + myJson.eye_color;
-  console.log(myJson.name);
-});
+  // myJson.results.forEach(function(element){
+  //   console.log(element);
+  // });
+
+  myJson.results.forEach( (film) => {
+    film.characters.forEach( (character) => {
+      fetch(character)
+      .then(function (response){
+        return response.json()
+      })
+      .then(function (characterValue){
+        console.log(characterValue.name)
+      })
+    })
+    // console.log(film.title)
+  })
+})
