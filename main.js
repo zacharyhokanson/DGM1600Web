@@ -12,3 +12,4 @@ fetch('https://swapi.co/api/people/1/')
     eyeColor.textContent = "Eye Color: " + myJson.eye_color;
   console.log(myJson.name);
 });
+//Test
