@@ -45,7 +45,17 @@
   #myName p{
     color: var(--lavendarBlue);
   }
+  #starWars{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  #charNames {
+    text-align: left;
+    align-self: center;
+  }
   #projects{
+    border: solid 1px black;
     margin-top: -20px;
     padding-bottom: 10px;
     background-color: var(--overcastGrey);
