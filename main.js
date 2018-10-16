@@ -25,7 +25,7 @@ let charName = document.querySelector("#characterName");
 //   })
 // })
 
-fetch("https://swapi.co/api/people/")
+fetch("https://swapi.co/api/people/") //test
 .then(function(response){
   return response.json();
 })
