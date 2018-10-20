@@ -54,6 +54,19 @@
     text-align: left;
     align-self: center;
   }
+  #starWars{
+    display: flex;
+    justify-content: right;
+  }
+  #films{
+    display: flex;
+    justify-content: center;
+    border: solid 1px green;
+    text-align: left;
+  }
+  #films ul{
+    list-style: none;
+  }
   #projects{
     border: solid 1px black;
     margin-top: -20px;

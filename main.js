@@ -1,9 +1,9 @@
 import {films} from "/assets/films.js";
 
-let filmsList = document.querySelector("#title");
+let filmsList = document.querySelector("#filmTitles");
 
 films.forEach((film) => {
-  let listItem = document.createAttribute("li");
+  let listItem = document.createElement("li");
   listItem.textContent = film.title;
   filmsList.appendChild(listItem);
   console.log(film.title);
