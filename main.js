@@ -16,7 +16,7 @@ films.forEach((film) => {
 // })
 // // console.log(films);
 
-function logPeople(){
+function logPeople(){ //potentially use .slice instead
   for(let i = 0; i < 9; i++){
     let listItem = document.createElement("li");
     listItem.textContent = people[i].name;
