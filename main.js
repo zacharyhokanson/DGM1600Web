@@ -25,4 +25,4 @@ function logPeople(){ //potentially use .slice instead
   }
 }
 // console.log(people[0].name);
-logPeople();
+// logPeople();
