@@ -1,28 +1,9 @@
-import {films} from "/assets/films.js";
-import {people} from "/assets/people.js";
+import {senators} from "/assets/senators.js";
 
-let filmsList = document.querySelector("#filmTitles");
-let peopleList = document.querySelector("#peopleNames");
+const senateData = senators.results[0].members;
 
-films.forEach((film) => {
-  let listItem = document.createElement("li");
-  listItem.textContent = film.title;
-  filmsList.appendChild(listItem);
-  console.log(film.title);
-})
+const mSenate = senateData.filter(senator => senator.gender === "M");
+const fSenate = senateData.filter(senator => senator.gender === "F");
 
-// people.forEach((person) => {
-//   console.log(person.name);
-// })
-// // console.log(films);
-
-function logPeople(){ //potentially use .slice instead
-  for(let i = 0; i < 9; i++){
-    let listItem = document.createElement("li");
-    listItem.textContent = people[i].name;
-    peopleList.appendChild(listItem);
-    console.log(people[i].name);
-  }
-}
-// console.log(people[0].name);
-// logPeople();
+console.log("Male Senators: " + mSenate.length);
+console.log("Female Senators: " + fSenate.length);
