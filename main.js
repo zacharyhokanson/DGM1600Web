@@ -6,7 +6,7 @@ const mSenate = senateData.filter(senator => senator.gender === "M");
 const fSenate = senateData.filter(senator => senator.gender === "F");
 
 const senatorWithPics = senateData.map(senator => {
-  senator['img'] = `https://www.govtrack.us/data/photos/${senator.govtrack_id}-200px.jpg`
+  senator['img'] = `https://www.govtrack.us/data/photos/${senator.govtrack_id}-200px.jpeg`
   return senator
 });
 
@@ -19,6 +19,7 @@ senatorWithPics.forEach(senator => {
   listItem.appendChild(imgItem);
   senatorList.appendChild(listItem);
   console.log(senator.first_name);
+  console.log(senator.govtrack_id);
 })
 
 const votes = senateData.map(senator => senator.total_votes);
