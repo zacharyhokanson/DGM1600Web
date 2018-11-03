@@ -10,7 +10,7 @@ const senatorWithPics = senateData.map(senator => {
   return senator
 });
 
-const senatorList = document.querySelector(".senatorList");
+const senatorList = document.querySelector("#senatorList");
 
 senatorWithPics.forEach(senator => {
   let listItem = document.createElement('li');
