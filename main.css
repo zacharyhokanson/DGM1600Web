@@ -10,3 +10,15 @@ body{
 #senatorList li{
   list-style: none;
 }
+/* figcaption{
+  border: 1px solid green;
+  background-color: rgba(0,0,0, 0.75);
+  color: white;
+  padding: 3px;
+  position: relative;
+  bottom: 25px;
+  text-align: center;
+} */
+/* figure{
+  border: solid 1px black;
+} */

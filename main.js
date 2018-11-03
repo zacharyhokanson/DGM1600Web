@@ -13,11 +13,17 @@ const senatorWithPics = senateData.map(senator => {
 const senatorList = document.querySelector("#senatorList");
 
 senatorWithPics.forEach(senator => {
+  let figureTag = document.createElement('figure');
+  let figureCaption = document.createElement('figcaption');
   let listItem = document.createElement('li');
   let imgItem = document.createElement('img');
+  figureCaption.textContent = `${senator.first_name} ${senator.last_name}`
   imgItem.src = senator.img;
-  listItem.appendChild(imgItem);
+  listItem.appendChild(figureTag);
+  figureTag.appendChild(imgItem);
   senatorList.appendChild(listItem);
+  figureTag.appendChild(figureCaption);
+  
   console.log(senator.first_name);
   console.log(senator.govtrack_id);
 })
