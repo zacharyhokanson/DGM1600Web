@@ -17,7 +17,7 @@ senatorWithPics.forEach(senator => {
   let figureCaption = document.createElement('figcaption');
   let listItem = document.createElement('li');
   let imgItem = document.createElement('img');
-  figureCaption.textContent = `${senator.first_name} ${senator.last_name}`
+  figureCaption.textContent = `${senator.first_name} ${senator.last_name} from ${senator.state}`
   imgItem.src = senator.img;
   listItem.appendChild(figureTag);
   figureTag.appendChild(imgItem);
