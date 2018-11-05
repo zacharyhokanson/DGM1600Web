@@ -1,16 +1,13 @@
-// import {senators} from "/assets/senators.js";
+import {senators} from "/assets/senators.js";
 
-// const senateData = senators.results[0].members;
+const senateData = senators.results[0].members;
 
-// const mSenate = senateData.filter(senator => senator.gender === "M");
-// const fSenate = senateData.filter(senator => senator.gender === "F");
+const senatorWithPics = senateData.map(senator => {
+  senator['img'] = `https://www.govtrack.us/data/photos/${senator.govtrack_id}-200px.jpeg`
+  return senator
+});
 
-// const senatorWithPics = senateData.map(senator => {
-//   senator['img'] = `https://www.govtrack.us/data/photos/${senator.govtrack_id}-200px.jpeg`
-//   return senator
-// });
-
-// const senatorList = document.querySelector("#senatorList");
+const senatorPic = document.querySelector(".senatorPic");
 
 // senatorWithPics.forEach(senator => {
 //   let figureTag = document.createElement('figure');
@@ -39,3 +36,19 @@
 // // console.log(mostVotes);
 
 // console.log(`The most votes ever cast was ${mostVotes.total_votes} by ${mostVotes.first_name} ${mostVotes.last_name} from ${mostVotes.state}.`);
+// senatorWithPics.forEach(senator => {
+//     let imgItem = document.createElement("img");
+//     imgItem.src = senator.img;
+//     senatorPic.appendChild(imgItem);
+//     console.log(senator.img);
+// })
+
+function showSenator(senator, n){
+    let imgItem = document.createElement("img");
+    imgItem.src = senator[n].img;
+    senatorPic.appendChild(imgItem);
+    console.log(senator[n].img);
+}
+
+showSenator(senatorWithPics, 3);
+
