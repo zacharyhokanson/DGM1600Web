@@ -8,19 +8,21 @@ const senatorWithPics = senateData.map(senator => {
   senator['img'] = `https://www.govtrack.us/data/photos/${senator.govtrack_id}-200px.jpeg`
   return senator
 });
-
-const fillStateMenu = senatorWithPics;
-
 const senatorPic = document.querySelector(".senatorPic");
 const stateMenu = document.getElementById("stateMenu");
 const senatorInfo = document.querySelector(".senatorInfo");
-
+let stateList = []
 ////////////////////////////////////////// FUNCTIONS //////////////////////////////////////////
+senatorWithPics.forEach(senator => { //creates array of states and alphabetizes it.
+  stateList.push(senator.state);
+  stateList.sort();
+});
 
-fillStateMenu.forEach(senator => { //populates state dropdown menu, needs to be alphabetized and remove duplicates
+
+stateList.forEach(state => { //populates state dropdown menu, needs to be alphabetized and remove duplicates
   let optionTag = document.createElement("option");
-  optionTag.setAttribute("id", senator.state);
-  optionTag.textContent = senator.state;
+  optionTag.setAttribute("id", state);
+  optionTag.textContent = state;
   stateMenu.appendChild(optionTag);
   // const filteredList = senator.filter(state => state == senator.state);
   // console.log(filteredList);
@@ -56,6 +58,4 @@ document.getElementById("stateMenu").addEventListener("change", function(){
   findSenator(senatorWithPics);
 });//Looks for change in stateMenu dropdown, look into how this works
 
-
-const filteredList = senatorWithPics.filter(state => state == "UT")
-console.log(filteredList);
+console.log(stateList.sort());
