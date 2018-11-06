@@ -22,6 +22,8 @@ fillStateMenu.forEach(senator => { //populates state dropdown menu, needs to be 
   optionTag.setAttribute("id", senator.state);
   optionTag.textContent = senator.state;
   stateMenu.appendChild(optionTag);
+  // const filteredList = senator.filter(state => state == senator.state);
+  // console.log(filteredList);
   
   // console.log(senator.state);
 });
@@ -53,3 +55,7 @@ function findSenator(senator) {//finds senator with matching state value to drop
 document.getElementById("stateMenu").addEventListener("change", function(){
   findSenator(senatorWithPics);
 });//Looks for change in stateMenu dropdown, look into how this works
+
+
+const filteredList = senatorWithPics.filter(state => state == "UT")
+console.log(filteredList);
