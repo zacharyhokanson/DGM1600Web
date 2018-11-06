@@ -1,4 +1,4 @@
-export const pokemon = [
+export const pokemon = [  //need to grab 3 more
 {
     "base": {
         "Attack": 52, 
@@ -1717,4 +1717,5 @@ export const pokemon = [
             432
         ]
     }
+}
 ]
