@@ -3,6 +3,9 @@ import {monsters} from './assets/5e-Monsters.js';
 ////////////////////////////////////////// VARIABLES //////////////////////////////////////////
 
 let monsterImg = document.querySelector('.monsterPic');
+let cardFace = document.querySelector('.flipCard__face--front');
+// let cardFrontImg = document.querySelector('.cardFrontImage');
+let cardFrontText = document.querySelector('.cardFrontText');
 
 ////////////////////////////////////////// FUNCTIONS //////////////////////////////////////////
 
@@ -27,15 +30,20 @@ function findMonster(monster) {
   };
 
 function displayMonster(monsterElement){
-    let imgItem = document.createElement('img');
-    let textItem = document.createElement('p');
-    textItem.setAttribute('class', 'has-text-centered');
-    console.log(textItem);
-    imgItem.src = `img/${monsterElement.index} ${monsterElement.name}.jpg`;
-    textItem.textContent = monsterElement.name;
-    monsterImg.appendChild(imgItem);
-    monsterImg.appendChild(textItem);
-    console.log(imgItem);
+    // let flipDiv = document.createElement('div');
+    // let imgItem = document.createElement('img');
+    // let textItem = document.createElement('p');
+
+
+
+    // textItem.setAttribute('class', 'has-text-centered');
+    // console.log(textItem);
+    monsterImg.src = `img/${monsterElement.index} ${monsterElement.name}.jpg`;
+    // cardFrontText.textContent = monsterElement.name;
+    // textItem.textContent = monsterElement.name;
+    // monsterImg.appendChild(imgItem);
+    // monsterImg.appendChild(textItem);
+    // console.log(imgItem);
 }
 
 
@@ -50,3 +58,8 @@ document.getElementById("monsterMenu").addEventListener("change", function(){
 //   console.log(i + 1, monsters[i].name);
 
 // }
+////////////////////////////////////////// CARD FLIP //////////////////////////////////////////
+var card = document.querySelector('.flipCard');
+card.addEventListener( 'mouseover', function() {
+  card.classList.toggle('is-flipped');
+});

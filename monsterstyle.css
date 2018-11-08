@@ -14,3 +14,54 @@
 select{
   text-align: center;
 }
+
+.scene {
+  width: 207px;
+  height: 207px;
+  border: 1px solid #CCC;
+  margin: 40px 0;
+  perspective: 600px;
+}
+
+.flipCard {
+  width: 207px;
+  height: 207px;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  position: absolute;
+}
+
+.flipCard.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flipCard__face {
+  position: absolute;
+  width: 207px;
+  height: 207px;
+  /* line-height: 260px;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px; */
+  backface-visibility: hidden;
+}
+
+.flipCard__face h6{
+  color: black;
+  text-align: center;
+}
+
+.flipCard__face--front {
+  height: 207px;
+  width: 207px;
+  background: white;
+  border: 5px solid black;
+}
+
+.flipCard__face--back {
+  background: blue;
+  border: 5px solid black;
+  transform: rotateY(180deg);
+}
