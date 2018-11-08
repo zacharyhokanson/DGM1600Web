@@ -42,6 +42,6 @@ function displayPokemon(pokeElement){
 
 
 
-document.getElementById("pokeMenu").addEventListener("change", function(){
-    findPokemon(pokemon);
-  });
+// document.getElementById("pokeMenu").addEventListener("change", function(){
+//     findPokemon(pokemon);
+//   });
