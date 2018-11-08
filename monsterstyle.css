@@ -54,14 +54,19 @@ select{
 }
 
 .flipCard__face--front {
-  height: 207px;
-  width: 207px;
+  /* height: 207px;
+  width: 207px; */
   background: white;
-  border: 5px solid black;
+  /* border: 5px solid black; */
 }
 
 .flipCard__face--back {
   background: blue;
   border: 5px solid black;
   transform: rotateY(180deg);
+}
+
+.strictSize{
+  max-height: 207px;
+  max-width: 207px;
 }
