@@ -1,4 +1,4 @@
-import {pokemon} from './assets/pokemon.js';
+// import {pokemon} from './assets/pokemon.js';
 
 
 let pokeImg = document.querySelector('.pokePic');

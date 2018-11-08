@@ -1,4 +1,5 @@
-[{
+export const monster = [
+  {
 	"index": 1,
 	"name": "Aboleth",
 	"size": "Large",
@@ -1990,3 +1991,4 @@
 	}],
 	"url": "http://www.dnd5eapi.co/api/monsters/25"
 }
+]
