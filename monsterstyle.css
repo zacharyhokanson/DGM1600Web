@@ -1,0 +1,16 @@
+#pageWrapper{
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.monsterPic img{
+  min-height: 207px;
+  max-height: 207px;
+  object-fit: scale-down;
+
+}
+
+select{
+  text-align: center;
+}

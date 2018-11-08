@@ -1,4 +1,4 @@
-export const monster = [
+export const monsters = [
   {
 	"index": 1,
 	"name": "Aboleth",
