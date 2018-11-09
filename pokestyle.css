@@ -3,3 +3,51 @@
   margin: 0 auto;
   margin-top: 50px;
 }
+
+.card{
+  height: 100%;
+}
+.pokePic{
+  height: 100%;
+  width: 100%;
+}
+
+.flipCardContainer{
+  position: relative;
+  height: 207px ;
+  width: 207px ;
+  border: 1px solid purple;
+}
+
+.flipCard{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+}
+
+.flipCard:hover{
+  transform: rotateY(180deg);
+}
+
+.flipCardFront{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  background: white;
+  color: black;
+  border: 5px solid black;
+}
+
+.flipCardBack{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+  background: green;
+  color: white;
+  transform: rotateY(180deg);
+  border: 5px solid black;
+}

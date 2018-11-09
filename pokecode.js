@@ -2,6 +2,8 @@ import {pokemon} from './assets/pokemon.js';
 
 
 let pokeImg = document.querySelector('.pokePic');
+let pokeName = document.querySelector('.cardBackName');
+let pokeStatsText = document.querySelector('.pokeStats');
 
 pokemon.forEach(pokemon => {
     let optionTag = document.createElement("option");
@@ -28,16 +30,16 @@ function findPokemon(pokemon) {
   };
 
 function displayPokemon(pokeElement){
-    let imgItem = document.createElement('img');
-    let textItem = document.createElement('p');
-    textItem.setAttribute('class', 'has-text-centered');
-    console.log(textItem);
-    imgItem.src = `img/${pokeElement.id}${pokeElement.ename}.png`;
-    textItem.textContent = pokeElement.ename;
-    pokeImg.appendChild(imgItem);
-    pokeImg.appendChild(textItem);
-    console.log(imgItem);
-    //senatorInfo.appendChild(textItem);
+    // let imgItem = document.createElement('img');
+    // let textItem = document.createElement('p');
+    // textItem.setAttribute('class', 'has-text-centered');
+    // console.log(textItem);
+    pokeImg.src = `img/${pokeElement.id}${pokeElement.ename}.png`;
+    pokeName.textContent = pokeElement.ename;
+    pokeStatsText.textContent = `Attack: ${pokeElement.base.Attack}`;
+    // pokeImg.appendChild(imgItem);
+    // pokeImg.appendChild(textItem);
+    // console.log(imgItem);
 }
 
 
@@ -45,3 +47,5 @@ function displayPokemon(pokeElement){
 document.getElementById("pokeMenu").addEventListener("change", function(){
     findPokemon(pokemon);
   });
+
+
