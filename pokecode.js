@@ -2,22 +2,21 @@ import {pokemon} from './assets/pokemon.js';
 
 
 let pokeImg = document.querySelector('.pokePic');
-let pokeName = document.querySelector('.cardBackName');
+let pokeName = document.querySelector('.pokeName');
 let pokeStatsText = document.querySelector('.pokeStats');
+let pokeMenu = document.querySelector(".pokeMenu")
 
 pokemon.forEach(pokemon => {
     let optionTag = document.createElement("option");
     //optionTag.setAttribute("id", pokemon.ename);
-    optionTag.textContent = pokemon.ename;
+    optionTag.textContent = `${pokemon.id} ${pokemon.ename}`;
+    optionTag.value = pokemon.ename;
     pokeMenu.appendChild(optionTag);
-    // const filteredList = senator.filter(state => state == senator.state);
-    // console.log(filteredList);
-    
-    // console.log(senator.state);
   });
 
 function findPokemon(pokemon) { 
-    let pokeValue = document.querySelector("#pokeMenu").value;
+    let pokeValue = pokeMenu.value;
+    console.log(pokeValue);
     let pokeObject;
     for(let i = 0; i < pokemon.length; i ++){//find better way to do this ie find and return object with correct ename
       if(pokeValue == pokemon[i].ename){
@@ -25,7 +24,7 @@ function findPokemon(pokemon) {
         break;
       }
     }
-    displayPokemon(pokeObject);//calls displaySenator function.
+    displayPokemon(pokeObject);
     console.log(pokeObject);
   };
 
@@ -44,7 +43,7 @@ function displayPokemon(pokeElement){
 
 
 
-document.getElementById("pokeMenu").addEventListener("change", function(){
+document.querySelector(".pokeMenu").addEventListener("change", function(){
     findPokemon(pokemon);
   });
 
