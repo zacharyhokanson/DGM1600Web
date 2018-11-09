@@ -9,49 +9,59 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   </head>
   <body>
-    <div id = "pageWrapper">
-        <!-- POKEMON CARD WRAPPER..................................................... -->
-        <div class = "columns is-centered">
-            <div class = 'column is-half'>
-                <div class = "card">
-                    <div class = "card-content has-text-centered">
-                        <h1 class = "title">Pokemon</h1>
-                        <div class = "select"> <!-- POKEMON DROPDOWN MENU -->
-                            <select id = "pokeMenu">
-                                <option>
-                                    Select Pokemon
-                                </option>
-                            </select>
-                        </div>
+    <div class = 'pageWrapper'>
+
+      <div class = 'columns is-centered'>
+      <h1 class = 'title'>POKEMON</h1>
+      </div>
+
+      <div class = 'columns is-centered mainContainer'> <!-- Overall container-->
+        
+        <div class = 'columns'>
+
+          <div class = 'column  is-one-third select is-multiple'> <!-- POKEMON DROPDOWN MENU -->
+            <select multiple size = 10 class = 'pokeMenu'>
+                <!-- <option>
+                    Select Pokemon
+                </option> -->
+            </select>
+          </div>
+        
+
+        <div class = 'column'>
+          <div class = 'flipCardContainer'>
+            <div class = 'flipCard'>
+
+              <div class = 'flipCardFront'>
+                  <div class = 'card'> 
+                      <div class = 'card-image'>
+                        <img src = '/img/155Cyndaquil.png' class = 'pokePic'>
+                      </div>
+                      <div class = 'card-content'>
+                          <p class = 'has-text-centered pokeName'>Cyndaquil</p>
+                      </div>
                     </div>
+              </div>
 
-                    <!-- FIRST POKEMON CARD START .............................................. -->
-                    <div class = "card">
-                        <div class="columns is-centered">
-                            <!-- <div class="column is-half"> FIRST POKEMON PICTURE -->
-
-                                <div class = 'flipCardContainer column is-half'>
-                                    <div class = 'flipCard'>
-                                        <div class = 'flipCardFront'>
-                                            <img src = '' class = 'pokePic'>
-                                        </div>
-                                        <div class = 'flipCardBack'>
-                                            <p class = 'cardBackName has-text-centered'></p>
-
-                                            <p class = pokeStats></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            <!-- </div> -->
-                        </div>
+              <div class = 'flipCardBack'>
+                  <div class = 'card'> 
+                      <div class = 'card-content'>
+                          <p class = 'has-text-centered pokeStats'>Pokemon Name 2</p>
+                      </div>
                     </div>
+              </div>
 
-                    <!-- FIRST POKEMON CARD END .............................................. -->
-                </div>
             </div>
+          </div>
         </div>
+
+      </div>
+
+        
+        
     </div>
+  </div>
   </body>
     <script type = "module" src = "pokecode.js"></script><!-- type  = "module" is important!! -->
 </html>
+

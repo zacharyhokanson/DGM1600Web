@@ -1,4 +1,4 @@
-export const pokemon = [  //need to grab 3 more
+export const pokemon = [  //GRAB CHIKORITA AND TWO MORE AT BOTTOM
 {
     "base": {
         "Attack": 52, 
