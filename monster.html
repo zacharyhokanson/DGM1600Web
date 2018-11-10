@@ -12,15 +12,15 @@
     <div class = 'pageWrapper'>
 
       <div class = 'columns is-centered'>
-      <h1 class = 'title'>POKEMON</h1>
+      <h1 class = 'title'>MONSTERS</h1>
       </div>
 
       <div class = 'columns is-centered mainContainer'> <!-- Overall container-->
         
         <div class = 'columns'>
 
-          <div class = 'column  is-one-third select is-multiple'> <!-- POKEMON DROPDOWN MENU -->
-            <select multiple size = 10 class = 'pokeMenu'>
+          <div class = 'column  is-two-fifths select is-multiple'> <!-- POKEMON DROPDOWN MENU -->
+            <select multiple size = 10 class = 'monsterMenu'>
                 <!-- <option>
                     Select Pokemon
                 </option> -->
@@ -35,10 +35,12 @@
               <div class = 'flipCardFront'>
                   <div class = 'card'> 
                       <div class = 'card-image'>
-                        <img src = '/img/155Cyndaquil.png' class = 'pokePic'>
+                        <div class = 'imageContainer'>
+                          <img src = '/img/Monster Placeholder.jpg' class = 'monsterPic column'>
+                        </div>
                       </div>
                       <div class = 'card-content'>
-                          <p class = 'has-text-centered pokeName'>Cyndaquil</p>
+                          <p class = 'has-text-centered monsterName'>~~~~~~~~~</p>
                       </div>
                     </div>
               </div>
@@ -46,7 +48,7 @@
               <div class = 'flipCardBack'>
                   <div class = 'card'> 
                       <div class = 'card-content'>
-                          <p class = 'has-text-centered pokeStats'>Pokemon Name 2</p>
+                          <p class = 'has-text-centered monsterStats'>Pokemon Name 2</p>
                       </div>
                     </div>
               </div>
@@ -62,6 +64,6 @@
     </div>
   </div>
   </body>
-    <script type = "module" src = "pokecode.js"></script><!-- type  = "module" is important!! -->
+    <script type = "module" src = "monstercode.js"></script><!-- type  = "module" is important!! -->
 </html>
 
