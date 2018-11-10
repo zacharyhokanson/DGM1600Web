@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Senators Test!</title>
+    <link href = "monsterstyle.css" rel = "stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <div class = 'pageWrapper'>
+
+      <div class = 'columns is-centered'>
+      <h1 class = 'title'>MONSTERS</h1>
+      </div>
+
+      <div class = 'columns is-centered mainContainer'> <!-- Overall container-->
+        
+        <div class = 'columns'>
+
+          <div class = 'column  is-two-fifths select is-multiple'> <!-- POKEMON DROPDOWN MENU -->
+            <select multiple size = 10 class = 'monsterMenu'>
+                <!-- <option>
+                    Select Pokemon
+                </option> -->
+            </select>
+          </div>
+        
+
+        <div class = 'column'>
+          <div class = 'flipCardContainer'>
+            <div class = 'flipCard'>
+
+              <div class = 'flipCardFront'>
+                  <div class = 'card'> 
+                      <div class = 'card-image'>
+                        <div class = 'imageContainer'>
+                          <img src = '/img/Monster Placeholder.jpg' class = 'monsterPic column'>
+                        </div>
+                      </div>
+                      <div class = 'card-content'>
+                          <p class = 'has-text-centered monsterName'>~~~~~~~~~</p>
+                      </div>
+                    </div>
+              </div>
+
+              <div class = 'flipCardBack'>
+                  <div class = 'card'> 
+                      <div class = 'card-content'>
+                          <p class = 'has-text-centered monsterStats'>Pokemon Name 2</p>
+                      </div>
+                    </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+        
+        
+    </div>
+  </div>
+  </body>
+    <script type = "module" src = "monstercode.js"></script><!-- type  = "module" is important!! -->
+</html>
+
