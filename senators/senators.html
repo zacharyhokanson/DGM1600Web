@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Senators Test!</title>
+    <link href = "main.css" rel = "stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  </head>
+  <body>
+    <div id = "pageWrapper">
+        <!-- SENATORS CARD WRAPPER..................................................... -->
+        <div class = "card">
+            <div class = "card-content has-text-centered">
+                <h1 class = "title">Senators</h1>
+                <div class = "select"> <!-- STATE DROPDOWN MENU -->
+                    <select id = "stateMenu">
+                        <option>
+                            Select State
+                        </option>
+                    </select>
+                </div>
+            </div>
+
+            <div class = "columns">
+
+                <!-- FIRST SENATOR CARD START .............................................. -->
+                <div class = "column is-half"> 
+                    <div class = "card">
+                        <div class="card-image">
+                            <div class="senatorPic image is-5by6"> <!-- FIRST SENATOR PICTURE -->
+                                
+                            </div>
+                        </div>
+                        <div class = "senatorInfo card-content">
+                            Card Content
+                        </div>
+                    </div>
+                </div>
+                <!-- FIRST SENATOR CARD END .............................................. -->
+
+                <!-- SECOND SENATOR CARD START ............................................. -->
+                <div class = "column is-half">
+                    <div class = "card">
+                        <div class="card-image">
+                            <div class="senatorPic image is-5by6"> <!-- SECOND SENATOR PICTURE -->
+                                    
+                            </div>
+                        </div>
+                        <div class = "card-content">
+                            Card Content
+                        </div>
+                    </div>
+                </div>
+                <!-- SECOND SENATOR CARD END ............................................. -->
+
+            </div>
+        </div>
+    </div>
+  </body>
+    <script type = "module" src = "main.js"></script><!-- type  = "module" is important!! -->
+</html>
