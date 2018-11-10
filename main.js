@@ -1,4 +1,4 @@
-var charName = document.querySelector("#characterName");
+var charName = document.querySelector("#characterName");//comment
 var hairColor = document.querySelector("#hairColor");
 var eyeColor = document.querySelector("#eyeColor");
 
