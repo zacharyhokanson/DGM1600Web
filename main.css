@@ -3,25 +3,31 @@
     --lavendarBlue: #6d7993;
     --overcastGrey: #9099a2;
     --paperWhite: #d5d5d5;
+
+    --redA: #bb0404 ;
+    --whiteA: #e7eae1;
+    --lightBlueA:#72b7bc ;
+    --navyBlueA:#0d2233 ;
+    --blackA: #04050a;
   }
   a{
     text-decoration: none;
   }
   a:link {
-      color: black;
+      color: var(--paperWhite);
   }
   a:visited {
-      color: black;
+      color: var(--paperWhite);
   }
   body{
-    background-color: aliceblue;
+    background-color: var(--whiteA);
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     margin: 0;
     padding: 0;
   }
   #navbar{
-    background-color: var(--paperWhite) ;
+    background-color: var(--navyBlueA) ;
     display: flex;
     justify-content: flex-end;
     position: fixed;
@@ -34,16 +40,18 @@
   }
   #welcome-section{
   /*   border: solid 1px green; */
-    background-color: var(--paperWhite);
+    background-color: var(--navyBlueA);
     display: flex;
     justify-content: center;
     min-height: 100vh;
   }
   #myName{
     align-self: center;
+    color: var(--paperWhite);
+    /* min-height: 50vh; */
   }
   #myName p{
-    color: var(--lavendarBlue);
+    color: var(--lightBlueA);
   }
   #projects{
     margin-top: -20px;
