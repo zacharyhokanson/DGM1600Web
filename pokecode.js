@@ -1,10 +1,17 @@
+
+/////////////////////////////////////////////IMPORTS/////////////////////////////////////////////
 import {pokemon} from './assets/pokemon.js';//test
 
-
+////////////////////////////////////////////VARIABLES////////////////////////////////////////////
 let pokeImg = document.querySelector('.pokePic');
 let pokeName = document.querySelector('.pokeName');
 let pokeStatsText = document.querySelector('.pokeStats');
 let pokeMenu = document.querySelector(".pokeMenu")
+
+
+////////////////////////////////////////////FUNCTIONS////////////////////////////////////////////
+
+//NOTE: REFACTOR!!!
 
 pokemon.forEach(pokemon => {
     let optionTag = document.createElement("option");
