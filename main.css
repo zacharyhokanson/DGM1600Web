@@ -20,17 +20,38 @@
     margin: 0;
     padding: 0;
   }
+
+  .square{
+    position: absolute;
+    transform: rotate(45deg);
+    background: var(--lavendarBlue);
+    /* margin-right: 100px; */
+    height: 84px;
+    width: 84px;
+  }
+
+  .filler{
+    height: 100%;
+    flex: 1;
+    /* background:black ; */
+  }
   #navbar{
-    background-color: var(--paperWhite) ;
+    /* border: 1px solid blueviolet; */
+    background-color: var(--lavendarBlue);
+    height: 60px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     position: fixed;
     width: 100%;
   }
   #navButtonWrapper{
+    /* border: 1px solid black; */
     display:flex;
-    flex: .5;
+    flex: .75;
     justify-content: space-around;
+    /* align-items: flex-end; */
+
+    
   }
   #welcome-section{
   /*   border: solid 1px green; */
@@ -41,6 +62,10 @@
   }
   #myName{
     align-self: center;
+    background: var(--overcastGrey);
+    height: 50vh;
+    width: 100vw;
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
   }
   #myName p{
     color: var(--lavendarBlue);
