@@ -1,7 +1,9 @@
+////////////////////////////////////////////VARIABLES////////////////////////////////////////////
 var charName = document.querySelector("#characterName");
 var hairColor = document.querySelector("#hairColor");
 var eyeColor = document.querySelector("#eyeColor");
 
+////////////////////////////////////////////FUNCTIONS////////////////////////////////////////////
 fetch('https://swapi.co/api/people/1/')
 .then(function(response) {
   return response.json();
@@ -12,4 +14,3 @@ fetch('https://swapi.co/api/people/1/')
     eyeColor.textContent = "Eye Color: " + myJson.eye_color;
   console.log(myJson.name);
 });
-//Test
