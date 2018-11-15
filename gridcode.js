@@ -2,7 +2,7 @@
 import {pokemon} from './assets/pokemon.js';
 
 ////////////////////////////////////////////VARIABLES////////////////////////////////////////////
-let pageWrapper = document.querySelector('.pageWrapper');
+let cardWrapper = document.querySelector('.cardWrapper');
 
 let button = document.querySelector('#newCard')
 
@@ -61,7 +61,7 @@ function generateCard(element){
     cardFront.className = 'flipCardFront';
     cardBack.className = 'flipCardBack';
 
-    pageWrapper.appendChild(cardContainer);
+    cardWrapper.appendChild(cardContainer);
     cardContainer.appendChild(flipCard);
     flipCard.appendChild(cardFront);
     flipCard.appendChild(cardBack);
