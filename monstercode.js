@@ -1,11 +1,14 @@
+/////////////////////////////////////////////IMPORTS/////////////////////////////////////////////
+
 import {monsters} from './assets/5e-Monsters.js';
 
-
+////////////////////////////////////////////VARIABLES////////////////////////////////////////////
 let monsterImg = document.querySelector('.monsterPic');
 let monsterName = document.querySelector('.monsterName');
 let monsterStatsText = document.querySelector('.monsterStats');
 let monsterMenu = document.querySelector('.monsterMenu')
 
+////////////////////////////////////////////FUNCTIONS////////////////////////////////////////////
 monsters.forEach(monster => {
     let optionTag = document.createElement("option");
     //optionTag.setAttribute("id", pokemon.ename);

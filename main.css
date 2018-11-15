@@ -1,0 +1,135 @@
+:root{
+    --dustyPink: #96858f;
+    --lavendarBlue: #6d7993;
+    --overcastGrey: #9099a2;
+    --paperWhite: #d5d5d5;
+  }
+  a{
+    text-decoration: none;
+  }
+  a:link {
+      color: black;
+  }
+  a:visited {
+      color: black;
+  }
+  body{
+    background-color: aliceblue;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .square{
+    position: absolute;
+    transform: rotate(45deg);
+    background: var(--lavendarBlue);
+    margin-top: 18px;
+    height: 84px;
+    width: 84px;
+    box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.3);
+    
+  }
+
+  .filler{
+    height: 100%;
+    flex: 1;
+    /* background:black ; */
+  }
+  #navbar{
+    /* border: 1px solid blueviolet; */
+    background-color: var(--lavendarBlue);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+    /* border: 3px solid black; */
+  }
+  #navButtonWrapper{
+    /* border: 1px solid black; */
+    display:flex;
+    flex: .75;
+    justify-content: space-around;
+    /* align-items: flex-end; */
+  }
+  #welcome-section{
+  /*   border: solid 1px green; */
+    background-color: var(--paperWhite);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  #myName{
+    align-self: center;
+    background: var(--overcastGrey);
+    height: 50vh;
+    width: 100vw;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.5);
+  }
+  #myName p{
+    color: var(--lavendarBlue);
+  }
+  #projects{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-top: -20px;
+    padding-bottom: 10px; */
+    background-color: var(--overcastGrey);
+    /* border: 1px solid purple; */
+  }
+  #projects h2{
+    /* padding: 50px 0px 20px 0px; */
+    /* border: 1px solid black; */
+  }
+  .projectTileWrapper{
+    display:flex;
+    align-self: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 60vw;
+    /* border: 1px solid green; */
+  }
+  .project-tile{
+    /* border: 1px solid blue; */
+    height: 200px;
+    width: 200px;
+    margin: 40px;
+    /* object-fit: contain; */
+  }
+  #contact{
+  /*   border: solid 1px black; */
+    padding: 10px 0px 100px 0px;
+    background-color:var(--paperWhite);
+    display: flex;
+    flex-direction: column;
+  }
+  #contact h2{
+    padding: 20px;
+  }
+  #contactButtonWrapper{
+  /*   border: solid 1px black; */
+    min-width: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  .contactButton{
+    margin:0px 75px 10px 75px;
+    border: solid 2px black;
+    border-radius: 40%;
+    background-color: var(--paperWhite);
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactButton:hover{
+    background-color: var(--overcastGrey);
+  }
+  

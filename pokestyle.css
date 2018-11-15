@@ -1,3 +1,6 @@
+
+/* CHECK FOR UNNECESSARY CODE */
+
 .pageWrapper{
   max-width: 900px;
   margin: 0 auto;
@@ -7,7 +10,6 @@
 .mainContainer {
   padding: 20px;
 }
-
 
 .card{
   height: 94%;
