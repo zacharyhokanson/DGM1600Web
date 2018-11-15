@@ -76,12 +76,32 @@
     color: var(--lavendarBlue);
   }
   #projects{
-    margin-top: -20px;
-    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* margin-top: -20px;
+    padding-bottom: 10px; */
     background-color: var(--overcastGrey);
+    /* border: 1px solid purple; */
   }
   #projects h2{
-    padding: 50px 0px 20px 0px;
+    /* padding: 50px 0px 20px 0px; */
+    /* border: 1px solid black; */
+  }
+  .projectTileWrapper{
+    display:flex;
+    align-self: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 60vw;
+    /* border: 1px solid green; */
+  }
+  .project-tile{
+    /* border: 1px solid blue; */
+    height: 200px;
+    width: 200px;
+    margin: 40px;
+    /* object-fit: contain; */
   }
   #contact{
   /*   border: solid 1px black; */
@@ -115,3 +135,4 @@
   .contactButton:hover{
     background-color: var(--overcastGrey);
   }
+  

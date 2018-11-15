@@ -1,3 +1,8 @@
+button{
+  height: 200px;
+  width: 60px;
+  margin: 20px;
+}
 .pageWrapper{
     display: flex;
     flex-wrap: wrap;
