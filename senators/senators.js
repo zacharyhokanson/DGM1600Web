@@ -24,8 +24,8 @@ stateList.forEach(state => { //populates state dropdown menu, needs to be alphab
   optionTag.setAttribute("id", state);
   optionTag.textContent = state;
   stateMenu.appendChild(optionTag);
-  // const filteredList = senator.filter(state => state == senator.state);
-  // console.log(filteredList);
+  const filteredList = senator.filter(state => state == senator.state);
+  console.log(filteredList);
   
   // console.log(senator.state);
 });

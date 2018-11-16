@@ -1,5 +1,9 @@
 
 /* CHECK FOR UNNECESSARY CODE */
+body{
+  font-family: 'Times New Roman', Times, serif;
+}
+
 
 .pageWrapper{
   max-width: 900px;

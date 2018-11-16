@@ -1,7 +1,22 @@
+:root{
+  --dustyPink: #96858f;
+  --lavendarBlue: #6d7993;
+  --overcastGrey: #9099a2;
+  --paperWhite: #d5d5d5;
+}
+body{
+  background: lightslategrey;
+  font-family: 'Times New Roman', Times, serif;
+}
 button{
   height: 350px;
   width: 300px;
   margin: 20px;
+  border: 2px solid black;
+}
+
+.test{
+  color: green;
 }
 .pageWrapper{
     /* display: flex;
@@ -10,18 +25,21 @@ button{
     justify-content: center; */
     max-width: 1000px;
     margin: 0 auto;
-    margin-top: 50px;
+    /* margin-top: 50px; */
+    background: var(--paperWhite);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   }
 
   .cardWrapper{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
   }
   .flipCardContainer{
     position: relative;
-    border: 1px solid black;
+    border: 3px solid black;
+    background: white;
     margin: 1px;
     width: 300px;
     height: 350px;
