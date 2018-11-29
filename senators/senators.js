@@ -1,4 +1,4 @@
-import {senators} from "/assets/senators.js";
+import {senators} from "./Assets/senators.js";
 
 ////////////////////////////////////////// VARIABLES //////////////////////////////////////////
 
@@ -19,16 +19,16 @@ senatorWithPics.forEach(senator => { //creates array of states and alphabetizes 
 });
 
 
-stateList.forEach(state => { //populates state dropdown menu, needs to be alphabetized and remove duplicates
-  let optionTag = document.createElement("option");
-  optionTag.setAttribute("id", state);
-  optionTag.textContent = state;
-  stateMenu.appendChild(optionTag);
-  const filteredList = senator.filter(state => state == senator.state);
-  console.log(filteredList);
+// stateList.forEach(state => { //populates state dropdown menu, needs to be alphabetized and remove duplicates
+//   let optionTag = document.createElement("option");
+//   optionTag.setAttribute("id", state);
+//   optionTag.textContent = state;
+//   stateMenu.appendChild(optionTag);
+//   const filteredList = senator.filter(state => state == senator.state);
+//   console.log(filteredList);
   
-  // console.log(senator.state);
-});
+//   // console.log(senator.state);
+// });
 
 function displaySenator(senator){//takes senator object and displays information on webpage, needs to be able to display 2 senators
     let imgItem = document.createElement("img");//need some way to clear info before adding new tags
@@ -58,4 +58,6 @@ document.getElementById("stateMenu").addEventListener("change", function(){
   findSenator(senatorWithPics);
 });//Looks for change in stateMenu dropdown, look into how this works
 
-console.log(stateList.sort());
+// console.log(stateList.sort());
+
+console.log(senateData.filter(senator => senator.state === 'UT'));
