@@ -25,10 +25,10 @@ let button = document.querySelector('#newCard')
 //     ]
 // }
 
-let newCard = new card();
+let newCard = new Card();
 
 ////////////////////////////////////////////FUNCTIONS////////////////////////////////////////////
-function card() {
+function Card() { //Object Constructor
     this.ename = 'Chikorita';
     this.id = '152';
     this.base = {
@@ -41,9 +41,9 @@ function card() {
     }
 }
 
-pokemon.forEach(element  => {
+pokemon.forEach(element  => {//Arrow Function that loops through array
     console.log(element.ename);
-    generateCard(element);
+    cardWrapper.appendChild(generateCard(element));
     
 });
 
@@ -51,7 +51,7 @@ function generateCard(element){
     let img = document.createElement('img');
     let pokeName = document.createElement('p');
     let pokeStats = document.createElement('p');
-    let cardContainer = document.createElement('div');
+    let cardContainer = document.createElement('div');//!!append and return this to create arrow function!!
     let flipCard = document.createElement('div');
     let cardFront = document.createElement('div');
     let cardBack = document.createElement('div');
@@ -61,7 +61,7 @@ function generateCard(element){
     cardFront.className = 'flipCardFront';
     cardBack.className = 'flipCardBack';
 
-    cardWrapper.appendChild(cardContainer);
+    // cardWrapper.appendChild(cardContainer);
     cardContainer.appendChild(flipCard);
     flipCard.appendChild(cardFront);
     flipCard.appendChild(cardBack);
@@ -75,9 +75,41 @@ function generateCard(element){
 
     pokeStats.textContent = `HP: ${element.base.HP} Attack: ${element.base.Attack} Sp. Atk: ${element.base["Sp.Atk"]}`;
     pokeStats.className = 'has-text-centered';
+
+    return cardContainer;
 };
 
+// const generateCard = (element) =>{
+//     let img = document.createElement('img');
+//     let pokeName = document.createElement('p');
+//     let pokeStats = document.createElement('p');
+//     let cardContainer = document.createElement('div');
+//     let flipCard = document.createElement('div');
+//     let cardFront = document.createElement('div');
+//     let cardBack = document.createElement('div');
 
+//     cardContainer.className = 'flipCardContainer';
+//     flipCard.className = 'flipCard';
+//     cardFront.className = 'flipCardFront';
+//     cardBack.className = 'flipCardBack';
+
+//     // cardWrapper.appendChild(cardContainer);
+//     cardContainer.appendChild(flipCard);
+//     flipCard.appendChild(cardFront);
+//     flipCard.appendChild(cardBack);
+//     cardFront.appendChild(img);
+//     cardFront.appendChild(pokeName);
+//     cardBack.appendChild(pokeStats);
+
+//     img.src = `img/${element.id}${element.ename}.png`;
+//     pokeName.textContent = element.ename;
+//     pokeName.className = 'has-text-centered';
+
+//     pokeStats.textContent = `HP: ${element.base.HP} Attack: ${element.base.Attack} Sp. Atk: ${element.base["Sp.Atk"]}`;
+//     pokeStats.className = 'has-text-centered';
+    
+//     return cardContainer;
+// }
 
 
 
@@ -85,7 +117,7 @@ button.addEventListener('click', () => {
     console.log(`Thanks for clicking`);
     pokemon.push(newCard);
     console.log(pokemon);
-    generateCard(newCard);
+    cardWrapper.appendChild(generateCard(newCard));
 
 });
 
