@@ -28,7 +28,7 @@ senatorWithPics.forEach(senator => { //creates array of states and alphabetizes 
 //   console.log(filteredList);
   
 //   // console.log(senator.state);
-// });
+// }); 
 
 function displaySenator(senator){//takes senator object and displays information on webpage, needs to be able to display 2 senators
     let imgItem = document.createElement("img");//need some way to clear info before adding new tags
