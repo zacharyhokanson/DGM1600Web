@@ -49,5 +49,3 @@ function displayMonster(monsterElement){
 document.querySelector(".monsterMenu").addEventListener("change", function(){
     findMonster(monsters);
   });
-
-

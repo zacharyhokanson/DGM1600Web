@@ -1,0 +1,63 @@
+:root{
+    --dustyPink: #96858f;
+    --lavendarBlue: #6d7993;
+    --overcastGrey: #9099a2;
+    --paperWhite: #d5d5d5;
+  }
+  body{
+    background: lightslategrey;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .pageWrapper{
+      max-width: 1000px;
+      margin: 0 auto;
+      background: var(--paperWhite);
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    }
+  
+    .cardWrapper{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .flipCardContainer{
+      position: relative;
+      border: 3px solid black;
+      background: white;
+      margin: 3px;
+      width: 200px;
+      height: 250px;
+    }
+    
+    .flipCard{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      transform-style: preserve-3d;
+      transition: all 1s ease;
+    }
+    
+    .flipCard:hover{
+      transform: rotateY(180deg);
+    }
+    
+    .flipCardFront{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      backface-visibility: hidden;
+    }
+    
+    .flipCardBack{
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      backface-visibility: hidden;
+      background: white;
+      transform: rotateY(180deg);
+    }
+
+    .abjuration{
+        background: pink;
+    }
