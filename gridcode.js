@@ -1,7 +1,17 @@
 /////////////////////////////////////////////IMPORTS/////////////////////////////////////////////
-import {pokemon} from './assets/pokemon.js';
+import {pokes} from './assets/pokemon2.js';
 
 ////////////////////////////////////////////VARIABLES////////////////////////////////////////////
+const Regions = {
+    Kanto:[0, 150],
+    Johto:[151, 250],
+    Hoenn:[251, 385],
+    Sinnoh:[386, 492],
+    Unova:[493, 648],
+    Kalos:[649, 717],
+}
+
+
 let cardWrapper = document.querySelector('.cardWrapper');
 
 let button = document.querySelector('#newCard')
@@ -41,13 +51,25 @@ function Card() { //Object Constructor
     }
 }
 
-pokemon.forEach(element  => {//Arrow Function that loops through array
-    console.log(element.ename);
-    cardWrapper.appendChild(generateCard(element));
-    
-});
 
-function generateCard(element){
+
+const imgId = (n) => {
+    if(n.id < 10){
+        // console.log(`00${pokes[i].id}`);
+        return `img/Pokemon/00${n.id}${n.name}.png`
+    }else if (n.id < 100){
+        // console.log(`0${pokes[i].id}`);
+        return `img/Pokemon/0${n.id}${n.name}.png`
+    }else{
+        // console.log(`${pokes[i].id}`);
+        return `img/Pokemon/${n.id}${n.name}.png`
+    }
+}
+
+
+
+
+const generateCard = (element) => {
     let img = document.createElement('img');
     let pokeName = document.createElement('p');
     let pokeStats = document.createElement('p');
@@ -61,7 +83,6 @@ function generateCard(element){
     cardFront.className = 'flipCardFront';
     cardBack.className = 'flipCardBack';
 
-    // cardWrapper.appendChild(cardContainer);
     cardContainer.appendChild(flipCard);
     flipCard.appendChild(cardFront);
     flipCard.appendChild(cardBack);
@@ -69,15 +90,25 @@ function generateCard(element){
     cardFront.appendChild(pokeName);
     cardBack.appendChild(pokeStats);
 
-    img.src = `img/${element.id}${element.ename}.png`;
-    pokeName.textContent = element.ename;
+    img.src = imgId(element);
+    pokeName.textContent = element.name;
     pokeName.className = 'has-text-centered';
 
-    pokeStats.textContent = `HP: ${element.base.HP} Attack: ${element.base.Attack} Sp. Atk: ${element.base["Sp.Atk"]}`;
+    pokeStats.textContent = element.description;
     pokeStats.className = 'has-text-centered';
 
     return cardContainer;
 };
+
+// pokes.forEach(element  => {//Arrow Function that loops through array
+//     // console.log(element.name);
+//     cardWrapper.appendChild(generateCard(element));
+    
+// });
+
+for(let i = Regions.Johto[0]; i <= Regions.Johto[1]; i++){
+    cardWrapper.appendChild(generateCard(pokes[i]));
+}
 
 // const generateCard = (element) =>{
 //     let img = document.createElement('img');
@@ -113,13 +144,13 @@ function generateCard(element){
 
 
 
-button.addEventListener('click', () => {
-    console.log(`Thanks for clicking`);
-    pokemon.push(newCard);
-    console.log(pokemon);
-    cardWrapper.appendChild(generateCard(newCard));
+// button.addEventListener('click', () => {
+//     console.log(`Thanks for clicking`);
+//     pokemon.push(newCard);
+//     console.log(pokemon);
+//     cardWrapper.appendChild(generateCard(newCard));
 
-});
+// });
 
 
 // function Bird() {
@@ -131,3 +162,6 @@ button.addEventListener('click', () => {
   
 //   let blueBird = new Bird();
 //   console.log(blueBird);
+
+
+
