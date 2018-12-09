@@ -1,5 +1,5 @@
 /////////////////////////////////////////////IMPORTS/////////////////////////////////////////////
-import {pokes} from './assets/pokemon2.js';
+import {pokes} from '../assets/pokemon2.js';
 
 ////////////////////////////////////////////VARIABLES////////////////////////////////////////////
 const Regions = {
@@ -64,11 +64,11 @@ const start = () => {
 
 const imgId = (n) => {
     if(n.id < 10){
-        return `img/Pokemon/00${n.id}${n.name}.png`
+        return `img/pokemon/00${n.id}${n.name}.png`
     }else if (n.id < 100){
-        return `img/Pokemon/0${n.id}${n.name}.png`
+        return `img/pokemon/0${n.id}${n.name}.png`
     }else{
-        return `img/Pokemon/${n.id}${n.name}.png`
+        return `img/pokemon/${n.id}${n.name}.png`
     }
 }
 

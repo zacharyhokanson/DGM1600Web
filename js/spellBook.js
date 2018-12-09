@@ -1,4 +1,4 @@
-import {spellData} from './assets/5e-Spells.js';
+import {spellData} from '../assets/5e-Spells.js';
 
 ////////////////////////////////////////////VARIABLES////////////////////////////////////////////
 let cardWrapper = document.querySelector('.cardWrapper');

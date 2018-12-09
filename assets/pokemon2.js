@@ -859,12 +859,12 @@ export const pokes = [
       "types": [
         "poison"
       ],
-      "name": "Nidoran-f",
+      "name": "Nidoran",
       "image": "https://cdn.recast.ai/blog/pokebot/29.png",
       "evolutions": [
         {
           "id": 29,
-          "name": "Nidoran-f"
+          "name": "Nidoran"
         },
         {
           "id": 30,
@@ -896,7 +896,7 @@ export const pokes = [
       "evolutions": [
         {
           "id": 29,
-          "name": "Nidoran-f"
+          "name": "Nidoran"
         },
         {
           "id": 30,
@@ -929,7 +929,7 @@ export const pokes = [
       "evolutions": [
         {
           "id": 29,
-          "name": "Nidoran-f"
+          "name": "Nidoran"
         },
         {
           "id": 30,
@@ -956,12 +956,12 @@ export const pokes = [
       "types": [
         "poison"
       ],
-      "name": "Nidoran-m",
+      "name": "Nidoran",
       "image": "https://cdn.recast.ai/blog/pokebot/32.png",
       "evolutions": [
         {
           "id": 32,
-          "name": "Nidoran-m"
+          "name": "Nidoran"
         },
         {
           "id": 33,
@@ -993,7 +993,7 @@ export const pokes = [
       "evolutions": [
         {
           "id": 32,
-          "name": "Nidoran-m"
+          "name": "Nidoran"
         },
         {
           "id": 33,
@@ -1026,7 +1026,7 @@ export const pokes = [
       "evolutions": [
         {
           "id": 32,
-          "name": "Nidoran-m"
+          "name": "Nidoran"
         },
         {
           "id": 33,
@@ -3541,18 +3541,18 @@ export const pokes = [
         "psychic",
         "fairy"
       ],
-      "name": "Mr-mime",
+      "name": "Mr Mime",
       "image": "https://cdn.recast.ai/blog/pokebot/122.png",
       "evolutions": [
         {
           "id": 439,
-          "name": "Mime-jr"
+          "name": "Mime Jr"
         },
         {
           "id": 122,
           "from": 439,
           "trigger": 1,
-          "name": "Mr-mime"
+          "name": "Mr Mime"
         }
       ]
     },
@@ -10916,12 +10916,12 @@ export const pokes = [
       "types": [
         "psychic"
       ],
-      "name": "Deoxys-normal",
+      "name": "Deoxys",
       "image": "https://cdn.recast.ai/blog/pokebot/386.png",
       "evolutions": [
         {
           "id": 386,
-          "name": "Deoxys-normal"
+          "name": "Deoxys"
         }
       ]
     },
@@ -11700,7 +11700,7 @@ export const pokes = [
           "from": 412,
           "trigger": "leveling",
           "trigger_lvl": 20,
-          "name": "Wormadam-plant"
+          "name": "Wormadam"
         },
         {
           "id": 414,
@@ -11721,7 +11721,7 @@ export const pokes = [
         "bug",
         "grass"
       ],
-      "name": "Wormadam-plant",
+      "name": "Wormadam",
       "image": "https://cdn.recast.ai/blog/pokebot/413.png",
       "evolutions": [
         {
@@ -11733,7 +11733,7 @@ export const pokes = [
           "from": 412,
           "trigger": "leveling",
           "trigger_lvl": 20,
-          "name": "Wormadam-plant"
+          "name": "Wormadam"
         },
         {
           "id": 414,
@@ -11766,7 +11766,7 @@ export const pokes = [
           "from": 412,
           "trigger": "leveling",
           "trigger_lvl": 20,
-          "name": "Wormadam-plant"
+          "name": "Wormadam"
         },
         {
           "id": 414,
@@ -12385,18 +12385,18 @@ export const pokes = [
         "psychic",
         "fairy"
       ],
-      "name": "Mime-jr",
+      "name": "Mime Jr",
       "image": "https://cdn.recast.ai/blog/pokebot/439.png",
       "evolutions": [
         {
           "id": 439,
-          "name": "Mime-jr"
+          "name": "Mime Jr"
         },
         {
           "id": 122,
           "from": 439,
           "trigger": 1,
-          "name": "Mr-mime"
+          "name": "Mr Mime"
         }
       ]
     },
@@ -13707,12 +13707,12 @@ export const pokes = [
         "ghost",
         "dragon"
       ],
-      "name": "Giratina-altered",
+      "name": "Giratina",
       "image": "https://cdn.recast.ai/blog/pokebot/487.png",
       "evolutions": [
         {
           "id": 487,
-          "name": "Giratina-altered"
+          "name": "Giratina"
         }
       ]
     },
@@ -13805,12 +13805,12 @@ export const pokes = [
       "types": [
         "grass"
       ],
-      "name": "Shaymin-land",
+      "name": "Shaymin",
       "image": "https://cdn.recast.ai/blog/pokebot/492.png",
       "evolutions": [
         {
           "id": 492,
-          "name": "Shaymin-land"
+          "name": "Shaymin"
         }
       ]
     },
@@ -15431,12 +15431,12 @@ export const pokes = [
       "types": [
         "water"
       ],
-      "name": "Basculin-red-striped",
+      "name": "Basculin",
       "image": "https://cdn.recast.ai/blog/pokebot/550.png",
       "evolutions": [
         {
           "id": 550,
-          "name": "Basculin-red-striped"
+          "name": "Basculin"
         }
       ]
     },
@@ -18827,7 +18827,7 @@ export const pokes = [
           "from": 677,
           "trigger": "leveling",
           "trigger_lvl": 25,
-          "name": "Meowstic-male"
+          "name": "Meowstic"
         }
       ]
     },
@@ -18840,7 +18840,7 @@ export const pokes = [
       "types": [
         "psychic"
       ],
-      "name": "Meowstic-male",
+      "name": "Meowstic",
       "image": "https://cdn.recast.ai/blog/pokebot/678.png",
       "evolutions": [
         {
@@ -18852,7 +18852,7 @@ export const pokes = [
           "from": 677,
           "trigger": "leveling",
           "trigger_lvl": 25,
-          "name": "Meowstic-male"
+          "name": "Meowstic"
         }
       ]
     },
@@ -18884,7 +18884,7 @@ export const pokes = [
           "id": 681,
           "from": 680,
           "trigger": "item",
-          "name": "Aegislash-shield",
+          "name": "Aegislash",
           "trigger_item": "dusk-stone"
         }
       ]
@@ -18917,7 +18917,7 @@ export const pokes = [
           "id": 681,
           "from": 680,
           "trigger": "item",
-          "name": "Aegislash-shield",
+          "name": "Aegislash",
           "trigger_item": "dusk-stone"
         }
       ]
@@ -18932,7 +18932,7 @@ export const pokes = [
         "steel",
         "ghost"
       ],
-      "name": "Aegislash-shield",
+      "name": "Aegislash",
       "image": "https://cdn.recast.ai/blog/pokebot/681.png",
       "evolutions": [
         {
@@ -18950,7 +18950,7 @@ export const pokes = [
           "id": 681,
           "from": 680,
           "trigger": "item",
-          "name": "Aegislash-shield",
+          "name": "Aegislash",
           "trigger_item": "dusk-stone"
         }
       ]
@@ -19714,18 +19714,18 @@ export const pokes = [
         "ghost",
         "grass"
       ],
-      "name": "Pumpkaboo-average",
+      "name": "Pumpkaboo",
       "image": "https://cdn.recast.ai/blog/pokebot/710.png",
       "evolutions": [
         {
           "id": 710,
-          "name": "Pumpkaboo-average"
+          "name": "Pumpkaboo"
         },
         {
           "id": 711,
           "from": 710,
           "trigger": "trade",
-          "name": "Gourgeist-average"
+          "name": "Gourgeist"
         }
       ]
     },
@@ -19739,18 +19739,18 @@ export const pokes = [
         "ghost",
         "grass"
       ],
-      "name": "Gourgeist-average",
+      "name": "Gourgeist",
       "image": "https://cdn.recast.ai/blog/pokebot/711.png",
       "evolutions": [
         {
           "id": 710,
-          "name": "Pumpkaboo-average"
+          "name": "Pumpkaboo"
         },
         {
           "id": 711,
           "from": 710,
           "trigger": "trade",
-          "name": "Gourgeist-average"
+          "name": "Gourgeist"
         }
       ]
     },

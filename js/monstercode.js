@@ -1,6 +1,6 @@
 /////////////////////////////////////////////IMPORTS/////////////////////////////////////////////
 
-import {monsters} from './assets/5e-Monsters.js';
+import {monsters} from '/assets/5e-Monsters.js';
 
 ////////////////////////////////////////////VARIABLES////////////////////////////////////////////
 let monsterImg = document.querySelector('.monsterPic');
@@ -36,7 +36,7 @@ function displayMonster(monsterElement){
     // let textItem = document.createElement('p');
     // textItem.setAttribute('class', 'has-text-centered');
     // console.log(textItem);
-    monsterImg.src = `img/${monsterElement.index} ${monsterElement.name}.jpg`;
+    monsterImg.src = `img/monsters/${monsterElement.index} ${monsterElement.name}.jpg`;
     monsterName.textContent = monsterElement.name;
     // pokeStatsText.textContent = `Attack: ${pokeElement.base.Attack}`;
     // pokeImg.appendChild(imgItem);
