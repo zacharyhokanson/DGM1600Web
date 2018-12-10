@@ -4,60 +4,155 @@
     --overcastGrey: #9099a2;
     --paperWhite: #d5d5d5;
   }
-  body{
-    background: lightslategrey;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  
-  .pageWrapper{
-      max-width: 1000px;
-      margin: 0 auto;
-      background: var(--paperWhite);
-      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-    }
-  
-    .cardWrapper{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .flipCardContainer{
-      position: relative;
-      border: 3px solid black;
-      background: white;
-      margin: 3px;
-      width: 200px;
-      height: 250px;
-    }
-    
-    .flipCard{
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      transform-style: preserve-3d;
-      transition: all 1s ease;
-    }
-    
-    .flipCard:hover{
-      transform: rotateY(180deg);
-    }
-    
-    .flipCardFront{
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      backface-visibility: hidden;
-    }
-    
-    .flipCardBack{
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      backface-visibility: hidden;
-      background: white;
-      transform: rotateY(180deg);
-    }
+body{
+  background: lightslategrey;
+  font-family: 'Times New Roman', Times, serif;
+}
+/* /////////////////// */
+/* /MODIFIER CLASSES/ */
+/* ///////////////// */
+.centerText{
+  text-align: center;
+}
 
-    .abjuration{
-        background: pink;
-    }
+.margin5{
+  margin: 5px;
+}
+
+.red{
+  background: red;
+}
+
+.blue{
+  background: blue;
+}
+
+.green{
+  background: green;
+}
+
+.orange{
+  background: orange;
+}
+
+.yellow{
+  background: yellow;
+}
+
+.black{
+  background: black;
+}
+
+.pink{
+  background: pink;
+}
+
+.purple{
+  background: purple;
+}
+
+/* /////////////////// */
+/* ///PAGE CLASSES/// */
+/* ///////////////// */
+.pageWrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--overcastGrey);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  }
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background: var(--dustyPink) */
+}
+
+.head{
+  margin: 10px;
+}
+
+.headText{
+  font-style: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.cardsContainer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid black;
+}
+
+/* /////////////////// */
+/* ///CARD CLASSES/// */
+/* ///////////////// */
+.card{
+  border: 3px solid black;
+  /* position: relative; */
+  background: var(--paperWhite);
+  background-image: url('../img/Artboard.png');
+  color: white;
+  margin: 10px;
+  width: 350px;
+  height: 409px;
+  overflow: hidden;
+}
+
+
+.cardHeader{
+  margin: 5px;
+  color: black;
+}
+
+.cardContent{
+  margin: 24px;
+}
+
+
+/* //////////////////// */
+/* /ANIMATION CLASSES/ */
+/* ////////////////// */
+.headAnimation{
+  position: relative;
+  bottom: 57px;
+  transition: 0.35s;
+  z-index: 3;
+}
+
+.contentAnimation{
+  /* opacity: 0; */
+  position: relative;
+  bottom: 10px;
+  transition: 0.35s;
+  z-index: 3;
+  
+}
+
+.bodyFade{
+  position: relative;
+  /* top: -60px; */
+  height: 100%;
+  width: 100%;
+  /* background: red; */
+  opacity: 0;
+  z-index: 2;
+  transition: 0.35s;
+}
+
+
+
+.isRaised{
+  transform: translateY(-340px);
+}
+
+.isVisible{
+  opacity: 1;
+}
+
+.isOpaque{
+  opacity: .3;
+}
+
+
+
