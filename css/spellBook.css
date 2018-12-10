@@ -8,9 +8,6 @@ body{
   background: lightslategrey;
   font-family: 'Times New Roman', Times, serif;
 }
-h1{
-  margin: 0;
-}
 /* /////////////////// */
 /* /MODIFIER CLASSES/ */
 /* ///////////////// */
@@ -18,6 +15,9 @@ h1{
   text-align: center;
 }
 
+.margin5{
+  margin: 5px;
+}
 
 /* /////////////////// */
 /* ///PAGE CLASSES/// */
@@ -40,6 +40,11 @@ h1{
   margin: 10px;
 }
 
+.headText{
+  font-style: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .cardsContainer{
   display: flex;
   justify-content: center;
@@ -50,14 +55,17 @@ h1{
 /* ///CARD CLASSES/// */
 /* ///////////////// */
 .card{
-  border: 3px solid black;
+  /* border: 3px solid black; */
+  /* position: relative; */
   background: grey;
+  background-image: url('../img/Artboard.png');
   color: white;
   margin: 10px;
   width: 300px;
   height: 350px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
+
 
 .cardHeader{
   margin: 5px;
@@ -68,21 +76,20 @@ h1{
 }
 
 
-
 /* //////////////////// */
 /* /ANIMATION CLASSES/ */
 /* ////////////////// */
 .headAnimation{
   position: relative;
-  bottom: -275px;
+  bottom: 57px;
   transition: 0.35s;
   z-index: 3;
 }
 
 .contentAnimation{
-  opacity: 0;
+  /* opacity: 0; */
   position: relative;
-  bottom: -275px;
+  bottom: 10px;
   transition: 0.35s;
   z-index: 3;
   
@@ -90,17 +97,17 @@ h1{
 
 .bodyFade{
   position: relative;
-  top: -330px;
+  /* top: -60px; */
   height: 100%;
   width: 100%;
   background: red;
   opacity: 0;
-  z-index: 0;
+  z-index: 2;
   transition: 0.35s;
 }
 
 .isRaised{
-  transform: translateY(-275px);
+  transform: translateY(-287px);
 }
 
 .isVisible{
@@ -108,7 +115,7 @@ h1{
 }
 
 .isOpaque{
-  opacity: .3;
+  opacity: .5;
 }
 
 
