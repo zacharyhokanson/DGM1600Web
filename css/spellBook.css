@@ -4,60 +4,112 @@
     --overcastGrey: #9099a2;
     --paperWhite: #d5d5d5;
   }
-  body{
-    background: lightslategrey;
-    font-family: 'Times New Roman', Times, serif;
-  }
-  
-  .pageWrapper{
-      max-width: 1000px;
-      margin: 0 auto;
-      background: var(--paperWhite);
-      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-    }
-  
-    .cardWrapper{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .flipCardContainer{
-      position: relative;
-      border: 3px solid black;
-      background: white;
-      margin: 3px;
-      width: 200px;
-      height: 250px;
-    }
-    
-    .flipCard{
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      transform-style: preserve-3d;
-      transition: all 1s ease;
-    }
-    
-    .flipCard:hover{
-      transform: rotateY(180deg);
-    }
-    
-    .flipCardFront{
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      backface-visibility: hidden;
-    }
-    
-    .flipCardBack{
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      backface-visibility: hidden;
-      background: white;
-      transform: rotateY(180deg);
-    }
+body{
+  background: lightslategrey;
+  font-family: 'Times New Roman', Times, serif;
+}
+h1{
+  margin: 0;
+}
+/* /////////////////// */
+/* /MODIFIER CLASSES/ */
+/* ///////////////// */
+.centerText{
+  text-align: center;
+}
 
-    .abjuration{
-        background: pink;
-    }
+
+/* /////////////////// */
+/* ///PAGE CLASSES/// */
+/* ///////////////// */
+.pageWrapper{
+    max-width: 1000px;
+    margin: 0 auto;
+    background: var(--paperWhite);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  }
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background: var(--dustyPink) */
+}
+
+.head{
+  margin: 10px;
+}
+
+.cardsContainer{
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+}
+
+/* /////////////////// */
+/* ///CARD CLASSES/// */
+/* ///////////////// */
+.card{
+  border: 3px solid black;
+  background: grey;
+  color: white;
+  margin: 10px;
+  width: 300px;
+  height: 350px;
+  overflow: hidden;
+}
+
+.cardHeader{
+  margin: 5px;
+}
+
+.cardContent{
+  margin: 24px;
+}
+
+
+
+/* //////////////////// */
+/* /ANIMATION CLASSES/ */
+/* ////////////////// */
+.headAnimation{
+  position: relative;
+  bottom: -275px;
+  transition: 0.35s;
+  z-index: 3;
+}
+
+.contentAnimation{
+  opacity: 0;
+  position: relative;
+  bottom: -275px;
+  transition: 0.35s;
+  z-index: 3;
+  
+}
+
+.bodyFade{
+  position: relative;
+  top: -330px;
+  height: 100%;
+  width: 100%;
+  background: red;
+  opacity: 0;
+  z-index: 0;
+  transition: 0.35s;
+}
+
+.isRaised{
+  transform: translateY(-275px);
+}
+
+.isVisible{
+  opacity: 1;
+}
+
+.isOpaque{
+  opacity: .3;
+}
+
+
+
