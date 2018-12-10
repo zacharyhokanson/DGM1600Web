@@ -1,84 +1,237 @@
-// import {spellData} from '../assets/5e-Spells.js';
+import {spellData} from '../assets/5e-Spells.js';
 
 // ////////////////////////////////////////////VARIABLES////////////////////////////////////////////
-// let cardWrapper = document.querySelector('.cardWrapper');
+let cardContainer = document.querySelector('.cardsContainer');
 
-// // let button = document.querySelector('#newCard')
-// let clearButton = document.querySelector('#clearCard');
+let magicSchools = ['Abjuration', 'Conjuration', 'Divination', 'Enchantment', 'Evocation', 'Illusion', 'Necromancy', 'Transmutation'];
 
-// let magicSchools = ['Abjuration', 'Conjuration', 'Divination', 'Enchantment', 'Evocation', 'Illusion', 'Necromancy', 'Transmutation'];
+let abjurationButton = document.querySelector('.Abjuration')
+let conjurationButton = document.querySelector('.Conjuration')
+let divinationButton = document.querySelector('.Divination')
+let enchantmentButton = document.querySelector('.Enchantment')
+let evocationButton = document.querySelector('.Evocation')
+let illusionButton = document.querySelector('.Illusion')
+let necromancyButton = document.querySelector('.Necromancy')
+let transmutationButton = document.querySelector('.Transmutation')
+let allButton = document.querySelector('.All')
 
-// let buttonList = [];
 
-// let removeCards = () => {
-//     let removeDiv = document.querySelector(".cardWrapper");
-//     while (removeDiv.firstChild) {
-//         removeDiv.removeChild(removeDiv.firstChild);
-//     }
-//     //buttonList.forEach(button => button.classList.remove('current-button'))
-// }
 
-// spellData.forEach(element  => {//Arrow Function that loops through array
-//     // console.log(element.name);
-//     cardWrapper.appendChild(generateCard(element));
+////////////////////////////////////////////FUNCTIONS////////////////////////////////////////////
+const resetCards = () => {
+  while (cardContainer.firstChild) {
+    cardContainer.removeChild(cardContainer.firstChild);
+  }
+}
+
+
+const generateCard = (element) => {
+    // CREATE DIVS
+    let cardBody = document.createElement('div')
+
+    let fadeBody = document.createElement('div')
+
+    let cardHead = document.createElement('div')
+
+    let cardContent = document.createElement('div')
     
-// });
+    //CREATE P's
 
-// function generateCard(element){
-//     let spellName = document.createElement('p');
-//     let spellSchool = document.createElement('p');
-//     let cardContainer = document.createElement('div');//!!append and return this to create arrow function!!
-//     let flipCard = document.createElement('div');
-//     let cardFront = document.createElement('div');
-//     let cardBack = document.createElement('div');
-
-//     cardContainer.className = 'flipCardContainer';
-//     flipCard.className = 'flipCard';
-//     cardFront.className = 'flipCardFront';
-//     cardBack.className = 'flipCardBack';
-
-//     // cardWrapper.appendChild(cardContainer);
-//     cardContainer.appendChild(flipCard);
-//     flipCard.appendChild(cardFront);
-//     flipCard.appendChild(cardBack);
+    let spellName = document.createElement('p')
     
-//     cardFront.appendChild(spellName);
-//     cardBack.appendChild(spellSchool);
+    let spellLevel = document.createElement('p')
+  
+    let spellSchool = document.createElement('p')
 
-//     spellName.textContent = element.name;
-//     spellName.className = 'has-text-centered';
+    let spellRange = document.createElement('p')
 
-//     spellSchool.textContent = element.school;
-//     spellSchool.className = 'has-text-centered';
+    let spellComponents = document.createElement('p')
+
+    let spellDuration = document.createElement('p')
+
+    let spellRitual = document.createElement('p')
     
-//     switch(element.school) {
-//         case 'Abjuration':
-//             cardBack.classList.add('abjuration');
-//             console.log('abj');
-//             break;
+    //ADD CLASSES
+    cardBody.className = 'card'
+    fadeBody.className = 'bodyFade'
+    cardHead.className = 'cardHeader centerText headAnimation'
+    cardContent.className = 'cardContent contentAnimation'
+    
+    spellName.className = 'headText'
+    spellLevel.className = 'centerText margin5'
+    spellSchool.className = 'centerText margin5'
+    spellRange.className = 'centerText margin5'
+    spellComponents.className = 'centerText margin5'
+    spellDuration.className = 'centerText margin5'
+    spellRitual.className = 'centerText margin5'
 
-//         default:
-//             break;
+    //CREATE CARD STRUCTURE
+    cardContainer.appendChild(cardBody)
 
-//     };
+    cardBody.appendChild(fadeBody)
 
-//     return cardContainer;
-// };
+    cardBody.appendChild(cardHead)
+    cardHead.appendChild(spellName)
 
-// clearButton.addEventListener('click', () => {
-//     removeCards();
+    cardBody.appendChild(cardContent)
+    cardContent.appendChild(spellLevel)
+    cardContent.appendChild(spellSchool)
+    cardContent.appendChild(spellRange)
+    cardContent.appendChild(spellComponents)
+    cardContent.appendChild(spellDuration)
+    cardContent.appendChild(spellRitual)
 
-// });
+    //ADD TEXT
+    spellName.textContent = element.name
+
+    spellLevel.textContent = element.level
+    spellSchool.textContent = element.school
+    spellRange.textContent = element.range
+    spellComponents.textContent = element.components
+    spellDuration.textContent = element.duration
+    spellRitual.textContent = element.ritual
+
+      //ADD BACKGROUND COLOR
+      switch(element.school){
+        case 'Abjuration':
+            fadeBody.classList.add('blue')
+            break
+
+        case 'Conjuration':
+          fadeBody.classList.add('orange')
+          break
+
+        case 'Divination':
+          fadeBody.classList.add('yellow')
+          break
+
+        case 'Enchantment':
+          fadeBody.classList.add('pink')
+          break
+
+        case 'Evocation':
+          fadeBody.classList.add('red')
+          break
+
+        case 'Illusion':
+          fadeBody.classList.add('purple')
+          break
+
+        case 'Necromancy':
+          fadeBody.classList.add('black')
+          break
+
+        case 'Transmutation':
+          fadeBody.classList.add('green')
+          break
+
+      }
 
 
-let card = document.querySelector('.card')
-let headAnimation = document.querySelector('.headAnimation')
-let contentAnimation = document.querySelector('.contentAnimation')
-let bodyFade = document.querySelector('.bodyFade')
+    cardBody.addEventListener( 'click', function() {
+      cardHead.classList.toggle('isRaised')
+      cardContent.classList.toggle('isRaised')
+      cardContent.classList.toggle('isVisible')
+      fadeBody.classList.toggle('isOpaque')
+    })
+    
+};
 
-card.addEventListener( 'click', function() {
-    headAnimation.classList.toggle('isRaised')
-    contentAnimation.classList.toggle('isRaised')
-    contentAnimation.classList.toggle('isVisible')
-    bodyFade.classList.toggle('isOpaque')
+
+
+spellData.forEach(spell =>{
+  generateCard(spell)
+})
+
+// generateCard(spellData[267])
+// generateCard(spellData[0])
+
+
+////////////////////////////////////////////BUTTON LISTENERS////////////////////////////////////////////
+
+abjurationButton.addEventListener('click', () => {
+  resetCards()
+  let schoolArray = spellData.filter(spell => spell.school === magicSchools[0])
+
+
+  schoolArray.forEach(spell =>{
+    generateCard(spell)
   })
+});
+
+conjurationButton.addEventListener('click', () => {
+  resetCards()
+  let schoolArray = spellData.filter(spell => spell.school === magicSchools[1])
+  
+
+  schoolArray.forEach(spell =>{
+    generateCard(spell)
+  })
+});
+
+divinationButton.addEventListener('click', () => {
+  resetCards()
+  let schoolArray = spellData.filter(spell => spell.school === magicSchools[2])
+  
+
+  schoolArray.forEach(spell =>{
+    generateCard(spell)
+  })
+});
+
+enchantmentButton.addEventListener('click', () => {
+  resetCards()
+  let schoolArray = spellData.filter(spell => spell.school === magicSchools[3])
+
+
+  schoolArray.forEach(spell =>{
+    generateCard(spell)
+  })
+});
+
+evocationButton.addEventListener('click', () => {
+  resetCards()
+  let schoolArray = spellData.filter(spell => spell.school === magicSchools[4])
+
+
+  schoolArray.forEach(spell =>{
+    generateCard(spell)
+  })
+});
+
+illusionButton.addEventListener('click', () => {
+  resetCards()
+  let schoolArray = spellData.filter(spell => spell.school === magicSchools[5])
+
+
+  schoolArray.forEach(spell =>{
+    generateCard(spell)
+  })
+});
+
+necromancyButton.addEventListener('click', () => {
+  resetCards()
+  let schoolArray = spellData.filter(spell => spell.school === magicSchools[6])
+
+
+  schoolArray.forEach(spell =>{
+    generateCard(spell)
+  })
+});
+
+transmutationButton.addEventListener('click', () => {
+  resetCards()
+  let schoolArray = spellData.filter(spell => spell.school === magicSchools[7])
+
+
+  schoolArray.forEach(spell =>{
+    generateCard(spell)
+  })
+});
+
+allButton.addEventListener('click', () => {
+  resetCards()
+  spellData.forEach(spell =>{
+    generateCard(spell)
+  })
+});

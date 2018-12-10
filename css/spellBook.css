@@ -19,13 +19,45 @@ body{
   margin: 5px;
 }
 
+.red{
+  background: red;
+}
+
+.blue{
+  background: blue;
+}
+
+.green{
+  background: green;
+}
+
+.orange{
+  background: orange;
+}
+
+.yellow{
+  background: yellow;
+}
+
+.black{
+  background: black;
+}
+
+.pink{
+  background: pink;
+}
+
+.purple{
+  background: purple;
+}
+
 /* /////////////////// */
 /* ///PAGE CLASSES/// */
 /* ///////////////// */
 .pageWrapper{
     max-width: 1000px;
     margin: 0 auto;
-    background: var(--paperWhite);
+    background: var(--overcastGrey);
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   }
 
@@ -48,6 +80,7 @@ body{
 .cardsContainer{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   border: 1px solid black;
 }
 
@@ -55,20 +88,21 @@ body{
 /* ///CARD CLASSES/// */
 /* ///////////////// */
 .card{
-  /* border: 3px solid black; */
+  border: 3px solid black;
   /* position: relative; */
-  background: grey;
+  background: var(--paperWhite);
   background-image: url('../img/Artboard.png');
   color: white;
   margin: 10px;
-  width: 300px;
-  height: 350px;
-  /* overflow: hidden; */
+  width: 350px;
+  height: 409px;
+  overflow: hidden;
 }
 
 
 .cardHeader{
   margin: 5px;
+  color: black;
 }
 
 .cardContent{
@@ -100,14 +134,16 @@ body{
   /* top: -60px; */
   height: 100%;
   width: 100%;
-  background: red;
+  /* background: red; */
   opacity: 0;
   z-index: 2;
   transition: 0.35s;
 }
 
+
+
 .isRaised{
-  transform: translateY(-287px);
+  transform: translateY(-340px);
 }
 
 .isVisible{
@@ -115,7 +151,7 @@ body{
 }
 
 .isOpaque{
-  opacity: .5;
+  opacity: .3;
 }
 
 
