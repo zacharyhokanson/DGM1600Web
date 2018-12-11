@@ -4,72 +4,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href = "./css/main.css" rel = "stylesheet"/>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script> -->
-    <title>Zac's Portfolio</title>
+    <title>Zac Hokanson</title>
 </head>
 <body>
 
-    <div id = "navbar"> <!--MODIFY NAVBAR TO WORK WITH BULMA-->
-      <!-- <div class = 'square'> </div> -->
-      <div class = 'filler'> </div>
-        <div id = "navButtonWrapper">
-          
-          <div>
-            <a href="#welcome-section"><p>About</p></a>
-          </div>
-            <a href="#projects"><p>Work</p></a>
-          <div>
-            <a href="#contact"><p>Contact</p></a>
-          </div>
-          <div>
-            <a href="JSProjects.html"><p>JavaScript Projects</p></a>
-          </div>
+    <div class = 'navbar'>
+
+        <div class = 'navItem'>
+            <div class = 'button'>
+                <a href = 'index.html'><p>Home</p></a>
+            </div>
+            <div class = 'bottomBorder'>
+            </div>
         </div>
-      </div>
+
+        <div class = 'navItem'>
+            <div class = 'button'>
+                <a href = 'JSProjects.html'><p>Projects</p></a>
+            </div>
+            <div class = 'bottomBorder'>
+            </div>
+        </div>
+        <div class = 'navItem'>
+
+            <div class = 'button'>
+                <a href = '#'><p>About</p></a>
+            </div>
+            <div class = 'bottomBorder'>
+            </div>
+        </div>
+
+        </div>
 
       <main>
-
-        
-        <section id = "welcome-section">
-          <div id = "myName">
+ 
+        <section class = 'welcomeSection'>
+          <div class = 'myName'>
             <h1>Zac Hokanson Portfolio</h1>
-            <p>Hello World</p>
+            <hr class = 'titleBreak'>  
+            <p class = 'subName'>subtext</p>
           </div>
         </section>
-
-
-        <section id = "projects">
-          <h2>Projects</h2>
-          <div class = 'projectTileWrapper'>
-            <a href = "https://codepen.io/zhokanson/pen/KxyoRd" target = "_blank" >
-              <img src="https://gravatar.com/avatar/070cb5921084af17b69814320da79f43?s=175" alt = "project" class = "project-tile"/>
-            </a>
-            <a href = "gridcards.html" target = "_blank" >
-              <img src="/img/pokemon/152Chikorita.png" alt = "project" class = "project-tile"/>
-            </a>
-            <a href = "monster.html" target = "_blank" >
-              <img src="/img/monsters/22 Ancient Red Dragon.jpg" alt = "project" class = "project-tile"/>
-            </a>
-          </div>
-        </section>
-
-
-        <section id = "contact">
-          <h2>Contact</h2>
-          <div id = "contactButtonWrapper">
-            <div>
-              <a id='profile-link' href="https://github.com/zacharyhokanson" target="_blank" class="contactButton">GitHub</a>
-            </div>
-            <div>
-              <a id='profile-link' href="spells.html" target="_blank" class="contactButton">Facebook</a>
-            </div>
-            <div>
-              <a id='profile-link' href="#" target="_blank" class="contactButton">Instagram</a>
-            </div>
-          </div>
-        </section>
-
 
       </main>
 </body>
