@@ -143,8 +143,6 @@ spellData.forEach(spell =>{
   generateCard(spell)
 })
 
-// generateCard(spellData[267])
-// generateCard(spellData[0])
 
 
 ////////////////////////////////////////////BUTTON LISTENERS////////////////////////////////////////////

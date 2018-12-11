@@ -11,7 +11,6 @@ let monsterMenu = document.querySelector('.monsterMenu')
 ////////////////////////////////////////////FUNCTIONS////////////////////////////////////////////
 monsters.forEach(monster => {
     let optionTag = document.createElement("option");
-    //optionTag.setAttribute("id", pokemon.ename);
     optionTag.textContent = `${monster.name}`;
     optionTag.value = monster.name;
     monsterMenu.appendChild(optionTag);
@@ -21,7 +20,7 @@ function findMonster(monster) {
     let monsterValue = monsterMenu.value;
     console.log(monsterValue);
     let monsterObject;
-    for(let i = 0; i < monster.length; i ++){//find better way to do this ie find and return object with correct ename
+    for(let i = 0; i < monster.length; i ++){
       if(monsterValue == monster[i].name){
         monsterObject = monster[i];
         break;
@@ -32,16 +31,8 @@ function findMonster(monster) {
   };
 
 function displayMonster(monsterElement){
-    // let imgItem = document.createElement('img');
-    // let textItem = document.createElement('p');
-    // textItem.setAttribute('class', 'has-text-centered');
-    // console.log(textItem);
     monsterImg.src = `img/monsters/${monsterElement.index} ${monsterElement.name}.jpg`;
     monsterName.textContent = monsterElement.name;
-    // pokeStatsText.textContent = `Attack: ${pokeElement.base.Attack}`;
-    // pokeImg.appendChild(imgItem);
-    // pokeImg.appendChild(textItem);
-    // console.log(imgItem);
 }
 
 

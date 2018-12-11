@@ -22,40 +22,19 @@ let sinnohButton = document.querySelector('.sinnoh')
 let unovaButton = document.querySelector('.unova')
 let kalosButton = document.querySelector('.kalos')
 let allButton = document.querySelector('.allRegions')
+let newButton = document.querySelector('.newCard')
 
-// let newCard = {
-//     "base": {
-//         "Attack": 49, 
-//         "Defense": 65, 
-//         "HP": 45, 
-//         "Sp.Atk": 49, 
-//         "Sp.Def": 65, 
-//         "Speed": 45
-//     }, 
-//     "cname": "\u83ca\u8349\u53f6", 
-//     "ename": "Chikorita", 
-//     "id": "152", 
-//     "jname": "\u30c1\u30b3\u30ea\u30fc\u30bf", 
-//     "skills": {}, 
-//     "type": [
-//         "\u8349"
-//     ]
-// }
 
-let newCard = new Card();
+let cardTwo = new Card();
 
 ////////////////////////////////////////////FUNCTIONS////////////////////////////////////////////
 function Card() { //Object Constructor
-    this.ename = 'Chikorita'
+    this.name = 'Chikorita'
     this.id = '152'
-    this.base = {
-        "Attack": Math.random(), 
-        "Defense": 65, 
-        "HP": 45, 
-        "Sp.Atk": 49, 
-        "Sp.Def": 65, 
-        "Speed": 45
-    }
+    this.description = "A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON."
+    this.types = [
+        "TEST"
+      ]
 }
 
 const start = () => {
@@ -83,7 +62,7 @@ const pokeTypeString = (poke) => {
 }
 
 
-const generateCard = (element) => { //REORDER!
+const generateCard = (element) => { 
     let img = document.createElement('img')
     let pokeName = document.createElement('p')
     let pokeType = document.createElement('p')
@@ -223,7 +202,10 @@ allButton.addEventListener('click', () => {
     selectRegion('All')
 });
 
-
+newButton.addEventListener('click', () => {
+    resetCards()
+    cardWrapper.appendChild(generateCard(cardTwo))
+});
 
 ////////////////////////////////////////////START////////////////////////////////////////////
 start()
