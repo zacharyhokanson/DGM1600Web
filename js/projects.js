@@ -5,6 +5,7 @@ import {projects} from '../assets/projecstApi.js'
 ////////////////////////////////////////////VARIABLES////////////////////////////////////////////
 let javaProjects = document.querySelector('.javaProjects')
 let webProjects = document.querySelector('.webProjects')
+let workProjects = document.querySelector('.workProjects')
 
 ////////////////////////////////////////////FUNCTIONS////////////////////////////////////////////
 const makeCard = (element) => {
@@ -36,11 +37,14 @@ const makeCard = (element) => {
 
     switch(element.type){
         case "JavaScript":
-        javaProjects.appendChild(card)
+            javaProjects.appendChild(card)
             break
 
         case "WebDesign":
-        webProjects.appendChild(card)
+            webProjects.appendChild(card)
+            break
+        case "WorkProjects":
+            workProjects.appendChild(card)
             break
     }
 }

@@ -13,18 +13,18 @@ export const projects = [
     {
         "name": "D&D Monster Cards",
         "link": "monster.html",
-        "target": "_blank",
+        "target": "_self",
         "image": "/img/cardThm/AncientRedDragon.jpg",
         "text": `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
         Ut enim ad minim veniam, quis nostrud exe`,
-        "type": "JavaScript"
+        "type": "WorkProjects"
     },
 
     {
         "name": "D&D Spell Cards",
         "link": "spells.html",
-        "target": "_blank",
+        "target": "_self",
         "image": "/img/cardThm/spellBookIcon.png",
         "text": `Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
         sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

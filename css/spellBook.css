@@ -1,13 +1,13 @@
 :root{
-    --dustyPink: #96858f;
-    --lavendarBlue: #6d7993;
-    --overcastGrey: #9099a2;
-    --paperWhite: #d5d5d5;
+  font-family: 'Montserrat', sans-serif; 
+  --bgGrey: #3e4244;
+  --electricBlue: #66c0ec;
+  --accentRed: #B36E6E;
   }
-body{
+/* body{
   background: lightslategrey;
   font-family: 'Times New Roman', Times, serif;
-}
+} */
 /* /////////////////// */
 /* /MODIFIER CLASSES/ */
 /* ///////////////// */
@@ -55,12 +55,23 @@ body{
 /* ///PAGE CLASSES/// */
 /* ///////////////// */
 .pageWrapper{
-    max-width: 1000px;
+    /* max-width: 1000px;
     margin: 0 auto;
     background: var(--overcastGrey);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); */
+    background: gray;
   }
-
+.buttonBar{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+.button{
+  border-radius: 5px;
+}
+.button:hover{
+  color: var(--accentRed);
+}
 .header{
   display: flex;
   flex-direction: column;
@@ -69,12 +80,18 @@ body{
 }
 
 .head{
+  font-size: 48px;
+  margin: 10px;
+}
+
+.subHead{
+  font-size: 18px;
   margin: 10px;
 }
 
 .headText{
-  font-style: bold;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  font-family: 'Barlow Condensed', sans-serif;
 }
 
 .cardsContainer{
@@ -90,7 +107,7 @@ body{
 .card{
   border: 3px solid black;
   /* position: relative; */
-  background: var(--paperWhite);
+  background: lightgray;
   background-image: url('../img/Artboard.png');
   color: white;
   margin: 10px;

@@ -1,9 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Montserrat');
+:root{
+  font-family: 'Montserrat', sans-serif; 
+  --bgGrey: #3e4244;
+  --electricBlue: #66c0ec;
+  --accentRed: #B36E6E;
 
-/* CHECK FOR UNNECESSARY CODE */
+}
 body{
-  font-family: 'Times New Roman', Times, serif;
+  background: var(--bgGrey);
+  min-height: 100vh;
 }
 
+/* THIS IS IN ORDER TO OVERWRITE BULMA */
+#myFont{
+  color: var(--electricBlue);
+  font-family: 'Montserrat', sans-serif;
+}
+#buttonFont{
+  color: var(--electricBlue);
+  font-family: 'Barlow Condensed', sans-serif;
+  background: var(--bgGrey);
+  border: var(--bgGrey);
+}
+a{
+  text-decoration: none;
+}
+a:link {
+    color: var(--electricBlue);
+}
+a:visited {
+    color: var(--electricBlue);
+}
+/* /////////////////////////////// */
 
 .pageWrapper{
   max-width: 900px;
