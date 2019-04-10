@@ -8,14 +8,14 @@ export const projects = [
         "type": "JavaScript"
     },
 
-    {
-        "name": "D&D Monster Cards",
-        "link": "monster.html",
-        "target": "_self",
-        "image": "/img/cardThm/AncientRedDragon.jpg",
-        "text": `A menu of generated D&D monster cards.`,
-        "type": "WorkProjects"
-    },
+    // {
+    //     "name": "D&D Monster Cards",
+    //     "link": "monster.html",
+    //     "target": "_self",
+    //     "image": "/img/cardThm/AncientRedDragon.jpg",
+    //     "text": `A menu of generated D&D monster cards.`,
+    //     "type": "WorkProjects"
+    // },
 
     {
         "name": "D&D Spell Cards",
