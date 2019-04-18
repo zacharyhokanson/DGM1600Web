@@ -5,7 +5,10 @@
     --accentRed: #B36E6E;
   
   }
-
+.header{
+    display: flex;
+    justify-content: center;
+}
 .cardContainer{
     display: flex;
     flex-wrap: wrap;
@@ -19,7 +22,7 @@
     background-color: grey;
     margin: 10px;
     padding: 5px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
     max-height: 250px;
     flex-basis: 450px;
 
@@ -37,8 +40,8 @@
 
 .cardImg{
     object-fit: contain;
-    border: 1px solid black;
-    border-radius: 3px;
+    /* border: 1px solid black; */
+    /* border-radius: 3px; */
     padding: 5px;
     background: white;
 }

@@ -22,7 +22,7 @@ export const projects = [
         "link": "spells.html",
         "target": "_self",
         "image": "/img/cardThm/spellBookIcon.png",
-        "text": `A grid of generated D&D spell cards wish CSS styling on click.`,
+        "text": `A grid of generated D&D spell cards with CSS styling on click.`,
         "type": "JavaScript"
     },
 
